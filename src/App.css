@@ -46,23 +46,35 @@
   flex-flow: row wrap;
   background-color: #AF9677;
   justify-content: center;
+  margin-top: 0.5em;
 }
 
 .App-nav > div {
-  padding: 0.7em 1.4em;
+  padding: 0.7em 0.7em;
   font-size: 1.3em;
   color: #333;
   font-weight: bold;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */    
+  user-select: none;          /* Likely future */
 }
 
-.App-nav > div:hover {
+@media only screen and (max-width: 500px) {
+  .App-nav-divider {
+    display: none;
+  }
+}
+
+.App-nav-divider:hover {
+  cursor: default;
+}
+
+.App-nav-item:hover {
   color: #4F6745;
   text-decoration: underline;
   /* background: #CCBBAB; */
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 620px) {
@@ -86,8 +98,9 @@
 
 .App > main {
   max-width: 1000px;
+  /* padding: 0.7em; */
   margin: 0 auto;
-  padding: 0.7em;
+  padding: 0.7em 0;
 }
 
 .App-intro-div {
@@ -100,4 +113,9 @@
 
 section {
   border-top: 2px solid #999;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }

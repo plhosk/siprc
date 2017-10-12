@@ -10,14 +10,18 @@ const App = () => (
         <h1 className="App-title">Saturna Island Parks and Recreation Commission</h1>
       </div>
     </header>
-    <nav className="App-nav">
-      <div>Parks</div>
-      <div>Trails</div>
-      <div>Events</div>
-      <div>Contact</div>
-      <div>About</div>
-    </nav>
     <main>
+      <nav className="App-nav">
+        <div className="App-nav-item">Parks</div>
+        <div className="App-nav-divider">-</div>
+        <div className="App-nav-item">Trails</div>
+        <div className="App-nav-divider">-</div>
+        <div className="App-nav-item">Events</div>
+        <div className="App-nav-divider">-</div>
+        <div className="App-nav-item">Contact</div>
+        <div className="App-nav-divider">-</div>
+        <div className="App-nav-item">About</div>
+      </nav>
       <div className="App-intro-div">
         <p className="App-intro">
           Welcome to the website of the Saturna Island Parks and Recreation Commission.
