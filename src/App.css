@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.App-nav {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #f4cc70;
+  justify-content: center;
+}
+
+.App-nav > div {
+  padding: 0.7em 1.3em;
+  font-size: 1.4em;
+  border-right: 1px solid grey;
+}
+
+#nav-first {
+  border-left: 1px solid grey;
+}
+
+.App-nav > div:hover {
+  background-color: #eae2d6;
+}
+
+@media only screen and (max-width: 620px) {
+  .App-nav {
+      /* flex-flow: column nowrap; */
+      /* align-items: center; */
+      font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .App-nav {
+      flex-flow: column nowrap;
+      align-items: center;
+      font-size: 80%;
+  }
+  .App-nav > div {
+    border-right: none;
+    border-bottom: 1px solid grey;
+    width: 100%;
+  }
+}
+
+.App-header {
+  background-color: #2a3132;
+  padding: 1em;
+  color: white;
+}
+
+.App-img-bird {
+  max-width: 480px;
+}
+
+@media only screen and (max-width: 500px) {
+  .App-img-bird {
+      max-width: 300px;
+  }
+}
+
+.App-logo-text {
+  font-family: 'Indie Flower', serif;
+  font-weight: bold;
+  color: #a1be95;
+  font-size: 3em;
+  padding-top: 0.3em;
+}
+
+.App-title {
+  font-size: 1.7em;
+  margin-top: 0;
+}
+
+.App > main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.7em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App > section {
+  border-top: 2px solid lightgrey;
+}
