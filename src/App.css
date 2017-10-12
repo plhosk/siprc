@@ -1,19 +1,57 @@
 .App {
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.App-header {
+  background-color: #2a3132;
+  padding: 0 0 0.2em 0;
+  color: white;
+}
+
+.App-header-img {
+  display: block;
+}
+
+.App-header-title {
+  background: linear-gradient(to top, #2a3132, #2a3132 80%, #475464);
+  padding: 0 1em;
+}
+
+@media only screen and (max-width: 777px) {
+  .App-header-title {
+    font-size: 75%;
+  }
+}  
+
+.App-logo-text {
+  font-family: 'Architects Daughter', serif;
+  font-weight: bold;
+  color: #6EA86A;
+  font-size: 3em;
+  padding-top: 0.4em;
+}
+
+.App-title {
+  /* font-family: 'Slabo 27px', 'Roboto', serif; */
+  /* font-family: 'Crimson Text', 'Roboto', serif; */
+  font-size: 2em;
+  margin-top: 0;
+  color: #AF8B41;
 }
 
 .App-nav {
   display: flex;
   flex-flow: row wrap;
-  background-color: #f4cc70;
+  background-color: #AF9677;
   justify-content: center;
 }
 
 .App-nav > div {
   padding: 0.7em 1.4em;
   font-size: 1.3em;
-  color: #555;
+  color: #333;
   font-weight: bold;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -22,8 +60,9 @@
 }
 
 .App-nav > div:hover {
-  color: #444;
+  color: #4F6745;
   text-decoration: underline;
+  /* background: #CCBBAB; */
 }
 
 @media only screen and (max-width: 620px) {
@@ -40,54 +79,9 @@
   }
   .App-nav > div {
     border-right: none;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #777;
     width: 100%;
   }
-}
-
-.App-header {
-  background-color: #2a3132;
-  padding: 1em 0;
-  padding-top: 0;
-  color: white;
-}
-
-.App-header-img-div {
-  height: 300px;
-  background-position: 65% 40%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/bird-rock.jpg");
-}
-
-@media only screen and (min-width: 1200px) {
-  .App-header-img-div {
-    height: 350px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .App-header-img-div {
-    height: 400px;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .App-header-img-div {
-    height: 450px;
-  }
-}
-
-.App-logo-text {
-  font-family: 'Indie Flower', serif;
-  font-weight: bold;
-  color: #a1be95;
-  font-size: 3em;
-  padding-top: 0.3em;
-}
-
-.App-title {
-  font-size: 1.7em;
-  margin-top: 0;
-  color: #68a225;
 }
 
 .App > main {
@@ -96,10 +90,14 @@
   padding: 0.7em;
 }
 
+.App-intro-div {
+  padding: 1em;
+}
+
 .App-intro {
   font-size: large;
 }
 
-.App > section {
-  border-top: 2px solid lightgrey;
+section {
+  border-top: 2px solid #999;
 }
