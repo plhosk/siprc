@@ -11,23 +11,23 @@
 }
 
 .App-nav > div {
-  padding: 0.7em 1.3em;
-  font-size: 1.4em;
-  border-right: 1px solid grey;
-}
-
-#nav-first {
-  border-left: 1px solid grey;
+  padding: 0.7em 1.4em;
+  font-size: 1.3em;
+  color: #555;
+  font-weight: bold;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */    
 }
 
 .App-nav > div:hover {
-  background-color: #eae2d6;
+  color: #444;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 620px) {
   .App-nav {
-      /* flex-flow: column nowrap; */
-      /* align-items: center; */
       font-size: 80%;
   }
 }
@@ -40,24 +40,39 @@
   }
   .App-nav > div {
     border-right: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #999;
     width: 100%;
   }
 }
 
 .App-header {
   background-color: #2a3132;
-  padding: 1em;
+  padding: 1em 0;
+  padding-top: 0;
   color: white;
 }
 
-.App-img-bird {
-  max-width: 480px;
+.App-header-img-div {
+  height: 300px;
+  background-position: 65% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/bird-rock.jpg");
 }
 
-@media only screen and (max-width: 500px) {
-  .App-img-bird {
-      max-width: 300px;
+@media only screen and (min-width: 1200px) {
+  .App-header-img-div {
+    height: 350px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .App-header-img-div {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .App-header-img-div {
+    height: 450px;
   }
 }
 
@@ -72,6 +87,7 @@
 .App-title {
   font-size: 1.7em;
   margin-top: 0;
+  color: #68a225;
 }
 
 .App > main {
