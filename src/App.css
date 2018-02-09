@@ -6,7 +6,8 @@
 
 .App-header {
   background-color: #2a3132;
-  padding: 0 0 0.2em 0;
+  padding: 0;
+  margin: 0;
   color: white;
 }
 
@@ -14,9 +15,30 @@
   display: block;
 }
 
+.App-header-horizontal-bar {
+  height: 2px;
+  background-color: #777;
+}
+
+/* .App-header-horizontal-bar-top { */
+  /* background-color: #888; */
+  /* height: 6px; */
+  /* height: 0.7em; */
+  /* background: linear-gradient(to top, #2a3132, #666666); */
+/* } */
+/* .App-header-horizontal-bar-bottom { */
+  /* background-color: #888; */
+  /* height: 1px; */
+  /* height: 0.7em; */
+  /* background: linear-gradient(to bottom, #2a3132, #666666); */
+/* } */
+
 .App-header-title {
-  background: linear-gradient(to top, #2a3132, #2a3132 80%, #475464);
-  padding: 0 1em;
+  /* background: linear-gradient(to top, #2a3132, #2a3132 85%, #475464); */
+  /* padding: 0.2em 0; */
+  padding: 0;
+  /* background-image: url('/forest-background.jpg'); */
+  /* background-size: 50%; */
 }
 
 @media only screen and (max-width: 777px) {
@@ -30,29 +52,35 @@
   font-weight: bold;
   color: #6EA86A;
   font-size: 3em;
-  padding-top: 0.4em;
+  padding-top: 0.2em;
 }
 
 .App-title {
-  /* font-family: 'Slabo 27px', 'Roboto', serif; */
-  /* font-family: 'Crimson Text', 'Roboto', serif; */
+  font-family: 'Raleway', sans-serif;
   font-size: 2em;
   margin-top: 0;
   color: #AF8B41;
 }
 
 .App-nav {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: #AF9677;
+  display: inline;
+  font-size: 80%;
   justify-content: center;
-  margin-top: 0.5em;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-nav > div {
-  padding: 0.7em 0.7em;
+.App-nav-bookend {
+  display: inline;
+  position: relative;
+  top: 14px;
+}
+
+.App-nav-item {
+  display: inline;
+  background-color: #81CAF4;
+  padding: 0.5em 2em;
   font-size: 1.3em;
-  color: #333;
+  color: #222;
   font-weight: bold;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -60,45 +88,71 @@
   user-select: none;          /* Likely future */
 }
 
-@media only screen and (max-width: 500px) {
-  .App-nav-divider {
-    display: none;
-  }
+.App-nav-item-container {
+  display: inline;
 }
 
-.App-nav-divider:hover {
-  cursor: default;
+.App-nav-item-img {
+  display: none;
+  position: relative;
+  top: 13.6px;
 }
 
 .App-nav-item:hover {
-  color: #4F6745;
   text-decoration: underline;
-  /* background: #CCBBAB; */
+  background: #B1D9ED;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 620px) {
-  .App-nav {
-      font-size: 80%;
+@media only screen and (max-width: 727px) {
+  .App-nav-item {
+    margin: 0.5em 0;  
   }
+  .App-nav-bookend {
+    display: none;
+  }
+  .App-nav-item-img {
+    display: inline;
+  }
+  .App-nav-item-container {
+    display: block;
+    height: 4em;
+  }    
 }
 
-@media only screen and (max-width: 500px) {
-  .App-nav {
-      flex-flow: column nowrap;
-      align-items: center;
-      font-size: 80%;
+@media only screen and (max-width: 250px) {
+  .App-nav-item-img {
+    display: none;
+
   }
-  .App-nav > div {
-    border-right: none;
-    border-bottom: 1px solid #777;
-    width: 100%;
-  }
+}  
+
+.App-section-header-container {
+  display: block;
+  height: 4em;
+  margin-bottom: 2em;
+}
+.App-section-header {
+  display: inline;
+  background-color: #81CAF4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #222;
+  padding: 0.5em 2em;
+  margin: 0.5em 0;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+.App-section-header-img {
+  position: relative;
+  top: 17px;
 }
 
 .App > main {
   max-width: 1000px;
-  /* padding: 0.7em; */
   margin: 0 auto;
   padding: 0.7em 0;
 }
@@ -115,7 +169,7 @@ section {
   border-top: 2px solid #999;
 }
 
-a {
+nav > a {
   color: inherit;
   text-decoration: inherit;
 }

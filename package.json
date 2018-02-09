@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build-clean": "rm build/static/css/*.map build/static/js/*.map build/service-worker.js",
-    "surge": "surge build siprc.surge.sh",
+    "surge": "surge build saturnaparks.ca",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
