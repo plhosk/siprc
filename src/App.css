@@ -80,9 +80,11 @@
   display: inline;
   position: relative;
   top: 14px;
+  margin: 1px;
 }
 
 .App-nav-item {
+  margin: 0 1px;
   display: inline;
   background-color: #81CAF4;
   padding: 0.5em 2em;
@@ -146,7 +148,7 @@
   font-size: 1.5em;
   font-weight: bold;
   color: #222;
-  padding: 0.35em 2em;
+  padding: 0.3em 1em 0.38em 1em;
   margin: 0.5em 0;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
@@ -172,18 +174,21 @@
   font-size: large;
 }
 
-/* section {
-  border-top: 2px solid #999;
-} */
+section {
+  background-color: #fafafa;
+  border: 3px solid #bbb;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
 
 nav > a {
   color: inherit;
   text-decoration: inherit;
 }
 
-.App-events-list-container {
-  margin: 3em 0;
-}
+/* .App-events-list-container {
+  margin: 1em 0;
+} */
 
 .App-events-year {
   font-family: 'Architects Daughter', serif;
@@ -191,7 +196,8 @@ nav > a {
   color: #6EA86A;
   font-size: 3em;
   padding-top: 0.2em;
-  border-bottom: 2px solid #6EA86A;
+  text-decoration: underline;
+  /* border-bottom: 1px solid #6EA86A; */
   /* max-width: 400px; */
   margin: 0 auto;
 }
@@ -222,6 +228,8 @@ nav > a {
   display: flex;
   flex-flow: column nowrap;
   width: 650px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 .App-events-title {
