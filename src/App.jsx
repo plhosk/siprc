@@ -1,6 +1,7 @@
 import React from 'react'
 import * as Scroll from 'react-scroll'
 
+import birdRockBase64 from './bird-rock'
 import './App.css'
 
 const { Element, scroller } = Scroll
@@ -10,7 +11,8 @@ const smoothScrollOpts = { smooth: true, duration: 500 }
 const App = () => (
   <div className="App">
     <header className="App-header">
-      <img className="App-header-img" width="100%" src="bird-rock.jpg" alt="bird on rock" />
+      {/* <img className="App-header-img" width="100%" src="bird-rock.jpg" alt="bird on rock" /> */}
+      <img className="App-header-img" width="100%" src={birdRockBase64} alt="bird on rock" />
       <div className="App-header-title">
         <div className="App-header-horizontal-bar-top" />
         <div className="App-logo-text">
