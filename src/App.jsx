@@ -104,13 +104,9 @@ const App = () => (
 
           <div className="App-events-list-container">
 
-            <div className="App-events-year">
-              2018
-            </div>
-
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Saturday, May 5th
+                Saturday, May 5th, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
@@ -127,7 +123,7 @@ const App = () => (
 
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Sunday, June 10th
+                Sunday, June 10th, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
@@ -144,7 +140,7 @@ const App = () => (
 
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Saturday, July 14th
+                Saturday, July 14th, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
@@ -160,7 +156,7 @@ const App = () => (
 
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Saturday, September 8th
+                Saturday, September 8th, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
@@ -177,7 +173,7 @@ const App = () => (
 
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Friday, December 21st
+                Friday, December 21st, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
@@ -210,6 +206,21 @@ const App = () => (
           <p>Email us at: <a href="mailto:parksrec@saturnanet.net">parksrec@saturnanet.net</a></p>
         </Element>
       </section>
+
+      <section>
+        <Element name="section-about">
+          <div className="App-section-header-container">
+            <img className="App-section-header-img" height="61" src="saturna-blue-left.png" alt="saturna left half" />
+            <div className="App-section-header">
+              About
+            </div>
+            <img className="App-section-header-img" height="61" src="saturna-blue-right.png" alt="saturna right half" />
+          </div>
+          <h3>Funding Requests</h3>
+          <p>For funding requests, download the <a href="SIPRC_Application_for_Funding.pdf" target="_blank">Application for Funding Form</a> (PDF).</p>
+        </Element>
+      </section>
+
 
     </main>
   </div>

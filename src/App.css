@@ -176,9 +176,11 @@
 
 section {
   background-color: #fafafa;
-  border: 3px solid #bbb;
+  /* border: 3px solid #bbb; */
+  border: 1px solid #fafafa;
   border-radius: 10px;
   margin-bottom: 1em;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }
 
 nav > a {
@@ -190,17 +192,15 @@ nav > a {
   margin: 1em 0;
 } */
 
-.App-events-year {
+/* .App-events-year {
   font-family: 'Architects Daughter', serif;
   font-weight: bold;
   color: #6EA86A;
-  font-size: 3em;
+  font-size: 2em;
   padding-top: 0.2em;
   text-decoration: underline;
-  /* border-bottom: 1px solid #6EA86A; */
-  /* max-width: 400px; */
   margin: 0 auto;
-}
+} */
 
 .App-events-list-flex {
   display: flex;
@@ -208,18 +208,24 @@ nav > a {
   justify-content: center;
   align-items: flex-start;
   margin: 2em 0;
+  padding: 0 6px;
 }
 
 .App-events-date {
   display: flex;
   flex-flow: row nowrap;
-  font-size: 1.2em;
-  /* font-weight: bold; */
-  border-radius: 20px;
-  color: #fff;
-  background-color: rgb(91, 141, 87);
+  /* font-size: 1.2em; */
+  font-weight: bold;
+  /* border-radius: 20px; */
+  color: #666;
+  /* background-color: rgba(91, 141, 87, 1); */
+  background-color: rgba(91, 141, 87, 0.15);
+  border-bottom: 3px solid rgba(91, 141, 87, 1);
+  /* border-top-left-radius: 10px; */
+  /* border-top-right-radius: 10px; */
   padding: 0.5em;
-  margin: 0 0.3em 0 0;
+  /* margin: 0 0.3em 0 0; */
+  /* margin-right: 6px; */
   width: 250px;
   justify-content: center;
 }
@@ -228,16 +234,17 @@ nav > a {
   display: flex;
   flex-flow: column nowrap;
   width: 650px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 10px; */
 }
 
 .App-events-title {
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
   /* text-decoration: underline; */
-  border-bottom: 2px solid #ddd;
+  /* border-bottom: 2px solid #ddd; */
   font-weight: bold;
-  border-radius: 10px 10px 0 0;
+  border-top-right-radius: 10px;
+  box-shadow: 1px 3px 5px 0 hsla(0, 0%, 0%, 0.15);
   background-color: #f2f2f2;
   padding: 0.5em;
 }
@@ -245,8 +252,10 @@ nav > a {
 .App-events-content {
   display: flex;
   flex-flow: row nowrap;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   border-radius: 0 0 10px 10px;
+  box-shadow: 1px 3px 5px 0 hsla(0, 0%, 0%, 0.15);
+  color: hsla(0, 0%, 0%, 0.8);
 }
 
 .App-events-content-text {
