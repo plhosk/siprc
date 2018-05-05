@@ -140,7 +140,7 @@ const App = () => (
 
             <div className="App-events-list-flex">
               <div className="App-events-date">
-                Saturday, July 14th, 2018
+                Saturday, July 21st, 2018
               </div>
               <div className="App-events-content-flex">
                 <div className="App-events-title">
