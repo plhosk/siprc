@@ -69,6 +69,10 @@
   color: #AF8B41;
 }
 
+.App-nav-container {
+  margin-bottom: 2em;
+}
+
 .App-nav {
   display: inline;
   font-size: 80%;
@@ -97,6 +101,23 @@
   user-select: none;          /* Likely future */
 }
 
+.App-nav-item:hover {
+  text-decoration: underline;
+  background: #B1D9ED;
+  cursor: pointer;
+}
+
+.App-nav-item-selected {
+  background-color: white;
+  /* border: 2px inset lightgrey;
+  box-sizing: border-box; */
+  /* outline: 1px solid grey; */
+}
+
+.App-nav-item-selected:hover {
+  background-color: white;
+}
+
 .App-nav-item-container {
   display: inline;
 }
@@ -107,13 +128,7 @@
   top: 13.6px;
 }
 
-.App-nav-item:hover {
-  text-decoration: underline;
-  background: #B1D9ED;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 727px) {
+@media only screen and (max-width: 850px) {
   .App-nav-item {
     margin: 0.5em 0;  
   }
