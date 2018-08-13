@@ -101,7 +101,7 @@
   margin: 0 1px;
   display: inline;
   background-color: #81CAF4;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   font-size: 1.3em;
   color: #222;
   font-weight: bold;
@@ -288,4 +288,14 @@ nav > a {
 .App-events-content-text {
   padding: 1em;
   text-align: left;
+}
+
+.App-maps-list {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.App-maps-list > h3 {
+  margin-top: 2em;
 }

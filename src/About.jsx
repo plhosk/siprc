@@ -17,7 +17,7 @@ const About = () => (
         </h3>
         <p>
           For funding requests, download the&nbsp;
-          <a href="SIPRC_Application_for_Funding.pdf" target="_blank">
+          <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
             Application for Funding Form
           </a>
           &nbsp;

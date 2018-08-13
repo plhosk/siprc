@@ -60,6 +60,20 @@ const Navbar = ({ location }) => {
           </div>
         </Link>
 
+        <Link to="/maps">
+          <div className="App-nav-item-container">
+            <img className="App-nav-item-img" height="49" src="saturna-blue-left.png" alt="saturna left half" />
+            <div
+              role="button"
+              tabIndex={0}
+              className={`App-nav-item${pathname === '/maps' ? ' App-nav-item-selected' : ''}`}
+            >
+              Maps
+            </div>
+            <img className="App-nav-item-img" height="49" src="saturna-blue-right.png" alt="saturna right half" />
+          </div>
+        </Link>
+
         <Link to="/contact">
           <div className="App-nav-item-container">
             <img className="App-nav-item-img" height="49" src="saturna-blue-left.png" alt="saturna left half" />

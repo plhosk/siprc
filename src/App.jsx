@@ -7,6 +7,7 @@ import BirdRock from './BirdRock'
 import Navbar from './Navbar'
 import Home from './Home'
 import Events from './Events'
+import Maps from './Maps'
 import Contact from './Contact'
 import About from './About'
 
@@ -32,6 +33,7 @@ const App = () => (
 
       <Route path="/" exact component={Home} />
       <Route path="/events" component={Events} />
+      <Route path="/maps" component={Maps} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />
 
