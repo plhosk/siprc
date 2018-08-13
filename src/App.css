@@ -2,6 +2,9 @@
   text-align: center;
   margin: 0 auto;
   padding-bottom: 2em;
+  max-width: 1200px;
+  /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3); */
+  /* background-color: #fff; */
 }
 
 .App-header {
@@ -20,6 +23,13 @@
   /* height: 10px; */
   height: 1em;
   background: linear-gradient(to top, #2a3132, #666666);
+}
+
+.App-header-horizontal-bar-bottom {
+  background-color: #888;
+  /* height: 10px; */
+  height: 0.2em;
+  background: linear-gradient(to bottom, #2a3132, #666666);
 }
 
 .App-header-horizontal-bar {
@@ -48,7 +58,7 @@
   /* background-size: 50%; */
 }
 
-@media only screen and (max-width: 777px) {
+@media only screen and (max-width: 750px) {
   .App-header-title {
     font-size: 75%;
   }
@@ -128,7 +138,7 @@
   top: 13.6px;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 750px) {
   .App-nav-item {
     margin: 0.5em 0;  
   }
@@ -176,9 +186,9 @@
 }
 
 .App > main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0.7em 0;
+  /* max-width: 1000px; */
+  /* margin: 0 auto;
+  padding: 0.7em; */
 }
 
 .App-intro-div {
@@ -194,6 +204,8 @@ section {
   /* border: 3px solid #bbb; */
   border: 1px solid #fafafa;
   border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   margin-bottom: 1em;
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css'
 
+import BirdRock from './BirdRock'
 import Navbar from './Navbar'
 import Home from './Home'
 import Events from './Events'
@@ -24,8 +25,9 @@ const App = () => (
             Saturna Island Parks and Recreation Commission
           </h1>
         </div>
+        <BirdRock />
         <Route component={Navbar} />
-        <div className="App-header-horizontal-bar" />
+        <div className="App-header-horizontal-bar-bottom" />
       </header>
 
       <Route path="/" exact component={Home} />
