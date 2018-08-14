@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const { scroller } = Scroll
 const smoothScrollOpts = {
-  smooth: true, duration: 500, offset: -60, // delay: 100,
+  smooth: true, duration: 500, offset: -60, // delay: 100, isDynamic: true,
 }
 
 const Navbar = ({ location }) => {
@@ -131,14 +131,16 @@ const Navbar = ({ location }) => {
         <img height="49" src="saturna-blue-right.png" alt="saturna right half" />
       </div>
 
-      <Scroll.Element name="navBarElement" />
+      <Scroll.Element name="navBarElement">
 
-      <div className="App-nav-site-logo">
-        <div className="App-logo-text">
-          {/* <img src="saturna-green.png" height="49" alt="saturna island" /> */}
-          SaturnaParks.ca
+        <div className="App-nav-site-logo">
+          <div className="App-logo-text">
+            {/* <img src="saturna-green.png" height="49" alt="saturna island" /> */}
+            SaturnaParks.ca
+          </div>
         </div>
-      </div>
+
+      </Scroll.Element>
     </div>
   )
 }
