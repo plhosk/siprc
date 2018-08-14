@@ -62,6 +62,9 @@
   .App-header-title {
     font-size: 75%;
   }
+  .App-footer {
+    font-size: 75%;
+  }
 }  
 
 .App-logo-text {
@@ -79,8 +82,13 @@
   color: #AF8B41;
 }
 
+.App-birdrock {
+  user-select: none;
+}
+
 .App-nav-container {
-  margin-bottom: 2em;
+  user-select: none;
+  margin-bottom: 1em;
 }
 
 .App-nav {
@@ -186,6 +194,7 @@
 }
 
 .App > main {
+  min-height: 512px;
   /* max-width: 1000px; */
   /* margin: 0 auto;
   padding: 0.7em; */
@@ -298,4 +307,19 @@ nav > a {
 
 .App-maps-list > h3 {
   margin-top: 2em;
+}
+
+.App-footer {
+  background-color: #2a3132;
+  padding: 2em;
+  text-align: center;
+}
+
+.App-nav-site-logo {
+  margin-top: 2em;
+  font-size: 50%;
+}
+
+.App-map-thumbnail {
+  margin: 1em;
 }

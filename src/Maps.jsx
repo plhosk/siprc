@@ -39,7 +39,7 @@ const Maps = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Parks and Attractions Map - 2017 (PDF)
+                Parks and Attractions Map - 2017
               </a>
             </li>
             <li>
@@ -48,7 +48,7 @@ const Maps = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Alternate Parks and Attractions Map - 2015 (JPG)
+                Alternate Parks and Attractions Map - 2015
               </a>
             </li>
           </ul>
@@ -63,7 +63,7 @@ const Maps = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Saturna&apos;s Shoreline Maps & Info (PDF)
+                Saturna&apos;s Shoreline Maps & Info
               </a>
             </li>
             <li>
@@ -72,9 +72,23 @@ const Maps = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Sharing Our Shorelines (PDF)
+                Sharing Our Shorelines
               </a>
             </li>
+            <li>
+              <a
+                href="docs/SaturnaSharingtheShorelineFinal.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Shore Access - Sharing the Shoreline brochure
+              </a>
+            </li>
+            <div className="App-map-thumbnail">
+              <a href="docs/Shore_Access_Map.png">
+                <img src="docs/Shore_Access_Map.png" width="200" alt="Shore Access Map" />
+              </a>
+            </div>
           </ul>
 
           <h3>
@@ -87,7 +101,7 @@ const Maps = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Bald Eagle Nest Sites - 2009 (PDF)
+                Bald Eagle Nest Sites - 2009
               </a>
             </li>
           </ul>

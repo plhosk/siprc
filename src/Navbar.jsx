@@ -1,10 +1,14 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 import React from 'react'
 import PropTypes from 'prop-types'
-// import * as Scroll from 'react-scroll'
+import * as Scroll from 'react-scroll'
 import { Link } from 'react-router-dom'
 
-// const { scroller } = Scroll
-// const smoothScrollOpts = { smooth: true, duration: 500 }
+const { scroller } = Scroll
+const smoothScrollOpts = {
+  smooth: true, duration: 500, offset: -60, // delay: 100,
+}
 
 const Navbar = ({ location }) => {
   const { pathname } = location
@@ -23,6 +27,7 @@ const Navbar = ({ location }) => {
               role="button"
               tabIndex={0}
               className={`App-nav-item${pathname === '/' ? ' App-nav-item-selected' : ''}`}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
             >
               Home
             </div>
@@ -53,6 +58,7 @@ const Navbar = ({ location }) => {
               role="button"
               tabIndex={0}
               className={`App-nav-item${pathname === '/events' ? ' App-nav-item-selected' : ''}`}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
             >
               Events
             </div>
@@ -67,8 +73,24 @@ const Navbar = ({ location }) => {
               role="button"
               tabIndex={0}
               className={`App-nav-item${pathname === '/maps' ? ' App-nav-item-selected' : ''}`}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
             >
               Maps
+            </div>
+            <img className="App-nav-item-img" height="49" src="saturna-blue-right.png" alt="saturna right half" />
+          </div>
+        </Link>
+
+        <Link to="/trails">
+          <div className="App-nav-item-container">
+            <img className="App-nav-item-img" height="49" src="saturna-blue-left.png" alt="saturna left half" />
+            <div
+              role="button"
+              tabIndex={0}
+              className={`App-nav-item${pathname === '/trails' ? ' App-nav-item-selected' : ''}`}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
+            >
+              Trails
             </div>
             <img className="App-nav-item-img" height="49" src="saturna-blue-right.png" alt="saturna right half" />
           </div>
@@ -81,8 +103,7 @@ const Navbar = ({ location }) => {
               role="button"
               tabIndex={0}
               className={`App-nav-item${pathname === '/contact' ? ' App-nav-item-selected' : ''}`}
-              // onClick={() => { scroller.scrollTo('section-contact', smoothScrollOpts) }}
-              // onKeyDown={() => { scroller.scrollTo('section-contact', smoothScrollOpts) }}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
             >
               Contact
             </div>
@@ -97,6 +118,7 @@ const Navbar = ({ location }) => {
               role="button"
               tabIndex={0}
               className={`App-nav-item${pathname === '/about' ? ' App-nav-item-selected' : ''}`}
+              onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
             >
               About
             </div>
@@ -107,6 +129,15 @@ const Navbar = ({ location }) => {
 
       <div className="App-nav-bookend">
         <img height="49" src="saturna-blue-right.png" alt="saturna right half" />
+      </div>
+
+      <Scroll.Element name="navBarElement" />
+
+      <div className="App-nav-site-logo">
+        <div className="App-logo-text">
+          {/* <img src="saturna-green.png" height="49" alt="saturna island" /> */}
+          SaturnaParks.ca
+        </div>
       </div>
     </div>
   )
