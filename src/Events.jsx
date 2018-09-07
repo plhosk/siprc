@@ -67,7 +67,7 @@ const Events = () => (
 
           <div className="App-events-list-flex">
             <div className="App-events-date">
-              Saturday, September 8th, 2018
+              Saturday, September 15th, 2018
             </div>
             <div className="App-events-content-flex">
               <div className="App-events-title">
@@ -75,6 +75,15 @@ const Events = () => (
               </div>
               <div className="App-events-content">
                 <div className="App-events-content-text">
+                  <span
+                    style={{
+                      color: 'red',
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    NEW DATE
+                  </span>
+                  <br />
                   Celebrate the last lazy days of summer by the beach,
                   listen to the latest news from the Lyall Creek salmon project.
                 </div>
