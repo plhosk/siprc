@@ -12,7 +12,7 @@ const Contact = () => (
       </div>
       <p>
         Email us at:&nbsp;
-        <a href="mailto:parksrec@saturnanet.net">
+        <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
           parksrec@saturnanet.net
         </a>
       </p>

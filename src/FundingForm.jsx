@@ -1,32 +1,32 @@
 import React from 'react'
 import { Prompt } from 'react-router-dom'
-import shortid from 'shortid'
-import produce from 'immer'
+// import shortid from 'shortid'
+// import produce from 'immer'
 
 // const discardConfirmation = () => 'Discard changes?'
 const discardConfirmation = () => null
 
 // eslint-disable-next-line react/prefer-stateless-function
 class FundingForm extends React.Component {
-  state = {
-    files: [],
-  }
+  // state = {
+  //   files: [],
+  // }
 
   componentDidMount() {
     window.onbeforeunload = discardConfirmation
   }
 
-  fileAdd = () => {
-    this.setState(produce((draft) => {
-      draft.files.push({
-        name: `file${draft.files.length + 1}`,
-        key: shortid.generate(),
-      })
-    }))
-  }
+  // fileAdd = () => {
+  //   this.setState(produce((draft) => {
+  //     draft.files.push({
+  //       name: `file${draft.files.length + 1}`,
+  //       key: shortid.generate(),
+  //     })
+  //   }))
+  // }
 
   render() {
-    const { files } = this.state
+    // const { files } = this.state
 
     return (
       <section>
@@ -108,8 +108,16 @@ class FundingForm extends React.Component {
               for the proposed activity. If the project is part of ongoing work by a Society or Group, in
               addition, please attach a full annual budget for the Society or Group.
             </li>
+            <li>
+              Please send the files in a separate email to&nbsp;
+              <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
+                parksrec@saturnanet.net
+              </a>
+              &nbsp;(PDF format preferred). Also please make note of the files in the comments field below.
+            </li>
           </ul>
 
+          {/*
           {files.map(file => (
             <p key={file.key}>
               <label htmlFor={file.name}>
@@ -122,6 +130,7 @@ class FundingForm extends React.Component {
           <button type="button" onClick={this.fileAdd}>Click to add PDF file...</button>
           <br />
           <br />
+          */}
 
           <p style={{ textAlign: 'left' }}>
             {/* eslint-disable-next-line jsx-a11y/label-has-for */}
