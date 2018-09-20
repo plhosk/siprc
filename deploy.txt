@@ -1,1 +1,1 @@
-To deploy, run "git push origin master"
+To deploy, run "git push origin master". github will trigger Netlify to build and deploy the site.

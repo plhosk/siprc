@@ -193,13 +193,6 @@
   top: 17px;
 }
 
-.App > main {
-  min-height: 512px;
-  /* max-width: 1000px; */
-  /* margin: 0 auto;
-  padding: 0.7em; */
-}
-
 .App-intro-div {
   padding: 1em;
 }
@@ -209,6 +202,7 @@
 }
 
 section {
+  min-height: 512px;
   background-color: #fafafa;
   /* border: 3px solid #bbb; */
   border: 1px solid #fafafa;

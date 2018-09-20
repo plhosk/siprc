@@ -10,6 +10,8 @@ import Maps from './Maps'
 import Trails from './Trails'
 import Contact from './Contact'
 import About from './About'
+import FundingForm from './FundingForm'
+import FormSubmitted from './FormSubmitted'
 
 const App = () => (
   <Router>
@@ -38,6 +40,8 @@ const App = () => (
         <Route path="/trails" component={Trails} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
+        <Route path="/funding-application" component={FundingForm} />
+        <Route path="/form-submitted" component={FormSubmitted} />
 
       </div>
       <div className="App-footer">
