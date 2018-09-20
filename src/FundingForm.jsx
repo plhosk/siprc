@@ -44,7 +44,7 @@ class FundingForm extends React.Component {
         </h1>
 
         <form
-          netlify
+          data-netlify="true"
           netlify-honeypot="bot-field"
           name="funding-application"
           action="/form-submitted"
