@@ -1,31 +1,203 @@
 <html>
-<head></head>
+<head>
+  <title>
+    Application for Funding
+  </title>
+</head>
 <body>
+  <script type="text/javascript">
+    window.onbeforeunload = function () {
+      return 'Discard changes?'
+    };
+  </script>
 
-<!-- A little help for the Netlify post-processing bots -->
-<form name="funding-application" netlify netlify-honeypot="bot-field" hidden>
-  <input type="text" name="name-of-society-or-group" />
-  <input type="text" name="contact-person" />
-  <input type="text" name="address" />
-  <input type="text" name="phone" />
-  <input type="text" name="email" />
-  <input type="text" name="amount-requested" />
-  <textarea name="additional-funding-sources" />
-  <input type="radio" name="participants-contribute-to-expenses" value="Yes" />
-  <input type="radio" name="participants-contribute-to-expenses" value="No" />
-  <input type="text" name="participants-contribute-to-expenses-amount" />
-  <input type="checkbox" name="designed-for" value="seniors" />
-  <input type="checkbox" name="designed-for" value="adults" />
-  <input type="checkbox" name="designed-for" value="children" />
-  <input type="text" name="number-participants" />
-  <textarea name="comments" />
-  <input type="text" name="submitted-by" />
-  <input type="text" name="date" />
-  <input type="text" name="cheque-payee" />
-  <input type="text" name="cheque-payee-address" />
+  <section>
+    <h1 style="text-align: center">
+      Saturna Island Parks & Recreation Commission
+      <br />
+      <br />
+      Application for Funding
+      <br />
+      <br />
+    </h1>
 
-  <textarea name="message"></textarea>
-</form>
+    <form
+      netlify
+      netlify-honeypot="bot-field"
+      name="funding-application"
+      action="/form-submitted"
+      style="text-align: right; margin: 0 auto; max-width: 700"
+    >
+      <input type="hidden" name="form-name" value="funding-application" />
+      <p style="display: none">
+        <label for="bot-field">
+          Don’t fill this out: &nbsp;
+          <input name="bot-field" id="bot-field" />
+        </label>
+      </p>
+      <p>
+        <label for="name-of-society-or-group">
+          Name of society or group: &nbsp;
+          <input type="text" name="name-of-society-or-group" id="name-of-society-or-group" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="contact-person">
+          Contact person: &nbsp;
+          <input type="text" name="contact-person" id="contact-person" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="address">
+          Address: &nbsp;
+          <input type="text" name="address" id="address" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="phone">
+          Phone: &nbsp;
+          <input type="text" name="phone" id="phone" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="email">
+          Email: &nbsp;
+          <input type="text" name="email" id="email" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="amount-requested">
+          Amount requested: &nbsp;
+          <input type="text" name="amount-requested" id="amount-requested" style="width: 300" />
+        </label>
+      </p>
+
+      <ul style="text-align: left">
+        <li>
+          Please attach a clear and precise printed description of the nature and scope of the
+          proposed recreational or parks related activity requiring financial support.
+          <br />
+          <br />
+        </li>
+        <li>
+          If the application is for a one-time activity or project, please attach the complete budget
+          for the proposed activity. If the project is part of ongoing work by a Society or Group, in
+          addition, please attach a full annual budget for the Society or Group.
+        </li>
+        <li>
+          Please send the files in a separate email to&nbsp;
+          <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
+            parksrec@saturnanet.net
+          </a>
+          &nbsp;(PDF format preferred). Also please make note of the files in the comments field below.
+        </li>
+      </ul>
+
+      <p style="text-align: left">
+        <label for="additional-funding-sources">
+          List all other funding sources contacted or petitioned and amounts requested:
+          <br />
+          <textarea name="additional-funding-sources" id="additional-funding-sources" rows="4" style="width: 100%">
+          </textarea>
+        </label>
+      </p>
+
+      <fieldset style="text-align: left">
+        <legend>Do participants/beneficiaries for the program/activity contribute to the expenses involved?</legend>
+        <label for="participants1">
+          <input type="radio" id="participants1" name="participants-contribute-to-expenses" value="Yes" />
+          Yes
+        </label>
+        <br />
+        <label for="participants2">
+          <input type="radio" id="participants2" name="participants-contribute-to-expenses" value="No" />
+          No
+        </label>
+        <p>
+          <label for="participants3">
+            Amount: &nbsp;
+            <input type="text" name="participants-contribute-to-expenses-amount" id="participants3" style="width: 300"} />
+          </label>
+        </p>
+      </fieldset>
+      <br />
+
+      <fieldset style="text-align: left">
+        <legend>The program/activity is designed for</legend>
+        <label for="designed1">
+          <input type="checkbox" id="designed1" name="designed-for" value="seniors" />
+          Seniors
+        </label>
+        <br />
+        <label for="designed2">
+          <input type="checkbox" id="designed2" name="designed-for" value="adults" />
+          Adults
+        </label>
+        <br />
+        <label for="designed3">
+          <input type="checkbox" id="designed3" name="designed-for" value="children" />
+          Children
+        </label>
+        <p>
+          <label for="number-participants">
+            Number of participants expected: &nbsp;
+            <input type="text" name="number-participants" id="number-participants" style="width: 300" />
+          </label>
+        </p>
+      </fieldset>
+
+      <p style="text-align: left">
+        <label for="comments">
+          Additional comments/information:
+          <br />
+          <textarea name="comments" id="comments" rows="4" style="width: 100%">
+          </textarea>
+        </label>
+      </p>
+
+      <p>
+        <label for="submitted-by">
+          Submitted by: &nbsp;
+          <input type="text" name="submitted-by" id="submitted-by" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="date">
+          Date: &nbsp;
+          <input type="text" name="date" id="date" style="width: 300" />
+        </label>
+      </p>
+
+      <p style="text-align: left">
+        Your application for funding will be considered by the Commission at the next regular
+        meeting. While not necessary, you are welcome to attend. If more information is needed
+        to make a decision, you will be contacted and advised. A decision by the Commission to
+        grant the request may be for the full amount or a lesser sum, and may contain conditions
+        as deemed appropriate in SIPRC’s sole discretion. Note: In most cases, funding is
+        provided by way of reimbursement based on submitted receipts
+      </p>
+
+      <p>
+        <label for="cheque-payee">
+          Cheque Payee: &nbsp;
+          <input type="text" name="cheque-payee" id="cheque-payee" style="width: 300" />
+        </label>
+      </p>
+      <p>
+        <label for="cheque-payee-address">
+          Address (if different from above): &nbsp;
+          <input type="text" name="cheque-payee-address" id="cheque-payee-address" style="width: 300" />
+        </label>
+      </p>
+
+      <br />
+      <p style="text-align: center">
+        <button type="submit" onClick="window.onbeforeunload = null">Submit Form</button>
+      </p>
+
+    </form>
+
+  </section>
 
 </body>
 </html>
