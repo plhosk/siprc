@@ -52,6 +52,7 @@ class FundingForm extends React.Component {
             textAlign: 'right', margin: '0 auto', maxWidth: 700,
           }}
         >
+          <input type="hidden" name="form-name" value="funding-application" />
           <p style={{ display: 'none' }}>
             <label htmlFor="bot-field">
               Don’t fill this out: &nbsp;
