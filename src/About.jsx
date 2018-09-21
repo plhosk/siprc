@@ -1,11 +1,11 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
-// import * as Scroll from 'react-scroll'
+import { Link } from 'react-router-dom'
+import * as Scroll from 'react-scroll'
 
-// const { scroller } = Scroll
-// const smoothScrollOpts = {
-//   smooth: true, duration: 500, offset: -60,
-// }
+const { scroller } = Scroll
+const smoothScrollOpts = {
+  smooth: true, duration: 500, offset: -60,
+}
 
 const About = () => (
   <section>
@@ -20,17 +20,17 @@ const About = () => (
       <h3>
         Funding Requests
       </h3>
-      {/*
+
       <p>
         For funding requests, fill out and submit our&nbsp;
         <Link
-          to="/funding-application"
+          to="/form-funding-application.html"
           onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
         >
           Online Application for Funding Form.
         </Link>
       </p>
-      */}
+
       <p>
         You may also download the&nbsp;
         <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
