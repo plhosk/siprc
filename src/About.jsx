@@ -1,11 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import * as Scroll from 'react-scroll'
-
-const { scroller } = Scroll
-const smoothScrollOpts = {
-  smooth: true, duration: 500, offset: -60,
-}
 
 const About = () => (
   <section>
@@ -23,12 +16,12 @@ const About = () => (
 
       <p>
         For funding requests, fill out and submit our&nbsp;
-        <Link
-          to="/form-funding-application.html"
-          onClick={() => { scroller.scrollTo('navBarElement', smoothScrollOpts) }}
+        <a
+          href="/form-funding-application.html"
+          target="_blank"
         >
           Online Application for Funding Form.
-        </Link>
+        </a>
       </p>
 
       <p>
