@@ -1,20 +1,18 @@
 {
   "name": "siprc",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
-    "babel-eslint": "^8.0.1",
-    "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
-    "immer": "^1.7.2",
+    "jspdf": "^1.4.1",
     "prop-types": "^15.6.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.1.1",
     "react-scroll": "^1.7.10",
     "shortid": "^2.2.13"
   },
@@ -24,5 +22,11 @@
     "build-clean": "rm build/static/css/*.map build/static/js/*.map build/service-worker.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
