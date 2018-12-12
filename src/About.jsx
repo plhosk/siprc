@@ -17,7 +17,8 @@ const About = () => (
 
       <p>
         For funding requests, fill out our&nbsp;
-        <Link to="/funding-application">
+        {/* <Link to="/funding-application"> */}
+        <Link to="/about">
           Online Application for Funding Form
         </Link>
         .
@@ -26,10 +27,10 @@ const About = () => (
 
       <div className="App-ordered-list">
         <ol>
-          <li>A PDF file will be created when you submit the form</li>
-          <li>Save the PDF to your device</li>
+          <li>A PDF file containing your responses will be created when you submit the form</li>
+          <li>You&apos;ll be prompted to save the PDF file to your device</li>
           <li>
-            Email the PDF as an attachment to&nbsp;
+            To complete your application, send the file, along with any supporting documents, by email to&nbsp;
             <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
           parksrec@saturnanet.net
             </a>
@@ -38,7 +39,7 @@ const About = () => (
       </div>
 
       <p>
-        Alternatively, you may also download a&nbsp;
+        Alternatively, you may download a&nbsp;
         <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
           blank form in PDF format
         </a>
