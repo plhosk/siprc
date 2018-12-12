@@ -317,3 +317,39 @@ nav > a {
 .App-map-thumbnail {
   margin: 1em;
 }
+
+.App-ordered-list {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.App-ordered-list li {
+  padding-bottom: 0.5em;
+}
+
+.App-funding-application {
+  text-align: right;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.App-form-input {
+  width: 300px;
+}
+
+.App-form-description {
+  text-align: left;
+}
+
+.App-form-textarea {
+  width: 100%;
+}
+
+.App-form-fieldset {
+  text-align: left;
+}
+
+.App-form-buttons {
+  text-align: center;
+}

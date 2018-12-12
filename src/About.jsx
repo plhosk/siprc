@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => (
   <section>
@@ -15,20 +16,33 @@ const About = () => (
       </h3>
 
       <p>
-        For funding requests, fill out and submit our&nbsp;
-        <a
-          href="/form-funding-application.html"
-          target="_blank"
-        >
-          Online Application for Funding Form.
-        </a>
+        For funding requests, fill out our&nbsp;
+        <Link to="/funding-application">
+          Online Application for Funding Form
+        </Link>
+        .
+        <br />
       </p>
 
+      <div className="App-ordered-list">
+        <ol>
+          <li>A PDF file will be created when you submit the form</li>
+          <li>Save the PDF to your device</li>
+          <li>
+            Email the PDF as an attachment to&nbsp;
+            <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
+          parksrec@saturnanet.net
+            </a>
+          </li>
+        </ol>
+      </div>
+
       <p>
-        You may also download the&nbsp;
+        Alternatively, you may also download a&nbsp;
         <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
-          form in PDF format.
+          blank form in PDF format
         </a>
+        &nbsp;and fill it out by hand.
       </p>
     </div>
   </section>
