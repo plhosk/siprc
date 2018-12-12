@@ -4,11 +4,13 @@ import { Prompt } from 'react-router-dom'
 import {
   Form, Text, TextArea, Scope, RadioGroup, Radio, Checkbox,
 } from 'informed'
+import Modal from 'react-responsive-modal'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class FundingApplication extends React.Component {
   state = {
     preventClose: false,
+    showSubmitModal: false,
   }
 
   componentDidMount() {
@@ -28,12 +30,25 @@ class FundingApplication extends React.Component {
     }
   }
 
+  handleShowSubmitModal = () => {
+    this.setState({
+      showSubmitModal: true,
+    })
+  }
+
+  handleHideSubmitModal = () => {
+    this.setState({
+      showSubmitModal: false,
+    })
+  }
+
   handleSubmit = (values) => {
     console.log(values)
+    this.handleShowSubmitModal()
   }
 
   render() {
-    const { preventClose } = this.state
+    const { preventClose, showSubmitModal } = this.state
     return (
       <div>
         <Prompt
@@ -270,7 +285,13 @@ class FundingApplication extends React.Component {
 
         </section>
 
-
+        <Modal
+          open={showSubmitModal}
+          contentLabel="Your PDF has been generated. It will now download to your computer."
+          onClose={this.handleHideSubmitModal}
+        >
+          <h3 style={{ border: '2px solid red' }}>Simple centered modal</h3>
+        </Modal>
       </div>
     )
   }
