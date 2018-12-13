@@ -5,13 +5,16 @@ import {
   Form, Text, TextArea, Scope, RadioGroup, Radio, Checkbox,
 } from 'informed'
 import Modal from 'react-responsive-modal'
-import generatePdf from './fundingApplicationPdf'
+import Loader from 'react-loader-spinner'
+
+// import generatePdf from './fundingApplicationPdf'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class FundingApplication extends React.Component {
   state = {
     preventClose: true,
     showSubmitModal: false,
+    loading: false,
   }
 
   componentDidMount() {
@@ -43,14 +46,21 @@ class FundingApplication extends React.Component {
     })
   }
 
-  handleSubmit = (values) => {
+  setLoadingIndicator = (loading) => {
+    this.setState({ loading })
+  }
+
+  handleSubmit = async (values) => {
     // console.log(values)
-    generatePdf(values)
+    this.setLoadingIndicator(true)
+    const generatePdf = await import('./fundingApplicationPdf')
+    generatePdf.default(values)
     this.handleShowSubmitModal()
+    this.setLoadingIndicator(false)
   }
 
   render() {
-    const { preventClose, showSubmitModal } = this.state
+    const { preventClose, showSubmitModal, loading } = this.state
     return (
       <div>
         <Prompt
@@ -272,13 +282,23 @@ class FundingApplication extends React.Component {
             </p>
 
             <br />
-            <p className="App-form-buttons">
+            <div className="App-form-buttons">
+              {loading
+                && (
+                  <Loader
+                    type="Audio"
+                    color="#6EA86A"
+                    height="50"
+                    width="50"
+                  />
+                )
+              }
               <button
                 type="submit"
               >
                 Create PDF File
               </button>
-            </p>
+            </div>
 
             <br />
             <br />

@@ -6445,11 +6445,6 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
-moment@^2.22.2:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
-
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -8180,6 +8175,14 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-loader-spinner@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-loader-spinner/-/react-loader-spinner-2.3.0.tgz#0f14da82f42cdfdf6567f8ddac3d4bd150cea231"
+  integrity sha512-Nu7RXMyAnvdGoZLH5boXaHbqLkgBEIPO1u75zOZkZNp2V+Dg8RvvlZ05SU3ajtmsFNteFe8BJbFd0samH0tXcw==
+  dependencies:
+    babel-runtime "^6.26.0"
+    prop-types "^15.6.2"
 
 react-minimalist-portal@^2.3.1:
   version "2.3.1"

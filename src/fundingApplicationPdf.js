@@ -1,12 +1,20 @@
-import moment from 'moment'
 import pdfMake from 'pdfmake/build/pdfmake'
 import pdfFonts from 'pdfmake/build/vfs_fonts'
 
-// import saturnaGreen from './saturnaGreen'
+import getFormattedDate from './formattedDate'
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs
 
-const generatePdf = async (values) => {
+// import saturnaGreen from './saturnaGreen'
+
+// const lazyLoad = async () => {
+//   const pdfMake = await import('pdfmake/build/pdfmake')
+//   const pdfFonts = await import('pdfmake/build/vfs_fonts')
+//   pdfMake.vfs = pdfFonts.pdfMake.vfs
+//   return pdfMake
+// }
+
+const generatePdf = (values) => {
   const docDefinition = {
     pageSize: 'LETTER',
     pageOrientation: 'portrait',
@@ -223,10 +231,12 @@ const generatePdf = async (values) => {
     ],
   }
 
-  const filename = `siprc-funding-application-${moment().format('YYYY-MM-DD')}.pdf`
+  const filename = `siprc-funding-application-${getFormattedDate()}.pdf`
 
-  const pdf = await pdfMake.createPdf(docDefinition)
-  await pdf.download(filename)
+  // lazyLoad().then(async (pdfMake) => {
+  const pdf = pdfMake.createPdf(docDefinition)
+  pdf.download(filename)
+  // })
 }
 
 export default generatePdf
