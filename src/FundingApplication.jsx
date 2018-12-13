@@ -5,11 +5,12 @@ import {
   Form, Text, TextArea, Scope, RadioGroup, Radio, Checkbox,
 } from 'informed'
 import Modal from 'react-responsive-modal'
+import generatePdf from './fundingApplicationPdf'
 
 // eslint-disable-next-line react/prefer-stateless-function
 class FundingApplication extends React.Component {
   state = {
-    preventClose: false,
+    preventClose: true,
     showSubmitModal: false,
   }
 
@@ -43,7 +44,8 @@ class FundingApplication extends React.Component {
   }
 
   handleSubmit = (values) => {
-    console.log(values)
+    // console.log(values)
+    generatePdf(values)
     this.handleShowSubmitModal()
   }
 
@@ -53,7 +55,7 @@ class FundingApplication extends React.Component {
       <div>
         <Prompt
           when={preventClose}
-          message="Are you sure you want to leave?"
+          message="Are you sure you want to leave this page?"
         />
 
         <section>
@@ -67,26 +69,26 @@ class FundingApplication extends React.Component {
           </h1>
 
           <Form
-            id="funding-application-form"
+            id="fundingApplicationForm"
             className="App-funding-application"
             onSubmit={this.handleSubmit}
           >
             <p>
-              <label htmlFor="name-of-society-or-group">
+              <label htmlFor="nameOfSocietyOrGroup">
                 Name of society or group: &nbsp;
                 <Text
-                  field="name-of-society-or-group"
-                  id="name-of-society-or-group"
+                  field="nameOfSocietyOrGroup"
+                  id="nameOfSocietyOrGroup"
                   className="App-form-input"
                 />
               </label>
             </p>
             <p>
-              <label htmlFor="contact-person">
+              <label htmlFor="contactPerson">
                 Contact person: &nbsp;
                 <Text
-                  field="contact-person"
-                  id="contact-person"
+                  field="contactPerson"
+                  id="contactPerson"
                   className="App-form-input"
                 />
               </label>
@@ -122,23 +124,23 @@ class FundingApplication extends React.Component {
               </label>
             </p>
             <p>
-              <label htmlFor="amount-requested">
+              <label htmlFor="amountRequested">
                 Amount requested: &nbsp;
                 <Text
-                  field="amount-requested"
-                  id="amount-requested"
+                  field="amountRequested"
+                  id="amountRequested"
                   className="App-form-input"
                 />
               </label>
             </p>
 
             <p className="App-form-description">
-              <label htmlFor="additional-funding-sources">
+              <label htmlFor="additionalFundingSources">
                 List all other funding sources contacted or petitioned and amounts requested:
                 <br />
                 <TextArea
-                  id="additional-funding-sources"
-                  field="additional-funding-sources"
+                  id="additionalFundingSources"
+                  field="additionalFundingSources"
                   rows="4"
                   className="App-form-textarea"
                 />
@@ -149,23 +151,23 @@ class FundingApplication extends React.Component {
               <legend>
                 Do participants/beneficiaries for the program/activity contribute to the expenses involved?
               </legend>
-              <RadioGroup field="participants-contribute-to-expenses">
-                <label htmlFor="participants-yes">
-                  <Radio id="participants-yes" value="yes" />
+              <RadioGroup field="participantsContributeToExpenses">
+                <label htmlFor="participantsYes">
+                  <Radio id="participantsYes" value="Yes" />
                   Participants/beneficiaries contribute to expenses
                 </label>
                 <br />
-                <label htmlFor="participants-no">
-                  <Radio id="participants-no" value="no" />
+                <label htmlFor="participantsNo">
+                  <Radio id="participantsNo" value="No" />
                   Participants/beneficiaries do not contribute to expenses
                 </label>
               </RadioGroup>
               <p>
-                <label htmlFor="participants-contribution-amount">
+                <label htmlFor="participantsContributionAmount">
                   Contribution amount: &nbsp;
                   <Text
-                    field="participants-contribution-amount"
-                    id="participants-contribution-amount"
+                    field="participantsContributionAmount"
+                    id="participantsContributionAmount"
                     className="App-form-input"
                   />
                 </label>
@@ -174,26 +176,26 @@ class FundingApplication extends React.Component {
             <br />
 
             <fieldset className="App-form-fieldset">
-              <Scope scope="designed-for-age-group">
-                <label htmlFor="designed-for-seniors">
-                  <Checkbox field="seniors" id="designed-for-seniors" />
+              <Scope scope="designedForAgeGroup">
+                <label htmlFor="designedForSeniors">
+                  <Checkbox field="seniors" id="designedForSeniors" />
                   The program/activity is designed for Seniors
                 </label>
                 <br />
-                <label htmlFor="designed-for-adults">
-                  <Checkbox field="adults" id="designed-for-adults" />
+                <label htmlFor="designedForAdults">
+                  <Checkbox field="adults" id="designedForAdults" />
                   The program/activity is designed for Adults
                 </label>
                 <br />
-                <label htmlFor="designed-for-children">
-                  <Checkbox field="children" id="designed-for-children" />
+                <label htmlFor="designedForChildren">
+                  <Checkbox field="children" id="designedForChildren" />
                   The program/activity is designed for Children
                 </label>
               </Scope>
               <p>
-                <label htmlFor="number-participants">
+                <label htmlFor="numberOfParticipants">
                   Number of participants expected: &nbsp;
-                  <Text field="number-participants" id="number-participants" className="App-form-input" />
+                  <Text field="numberOfParticipants" id="numberOfParticipants" className="App-form-input" />
                 </label>
               </p>
             </fieldset>
@@ -235,9 +237,9 @@ class FundingApplication extends React.Component {
             </p>
 
             <p>
-              <label htmlFor="submitted-by">
+              <label htmlFor="submittedBy">
                 Submitted by: &nbsp;
-                <Text field="submitted-by" id="submitted-by" className="App-form-input" />
+                <Text field="submittedBy" id="submittedBy" className="App-form-input" />
               </label>
             </p>
             <p>
@@ -253,19 +255,19 @@ class FundingApplication extends React.Component {
               to make a decision, you will be contacted and advised. A decision by the Commission to
               grant the request may be for the full amount or a lesser sum, and may contain conditions
               as deemed appropriate in SIPRC’s sole discretion. Note: In most cases, funding is
-              provided by way of reimbursement based on submitted receipts
+              provided by way of reimbursement based on submitted receipts.
             </p>
 
             <p>
-              <label htmlFor="cheque-payee">
+              <label htmlFor="chequePayee">
                 Cheque Payee: &nbsp;
-                <Text field="cheque-payee" id="cheque-payee" className="App-form-input" />
+                <Text field="chequePayee" id="chequePayee" className="App-form-input" />
               </label>
             </p>
             <p>
-              <label htmlFor="cheque-payee-address">
+              <label htmlFor="chequePayeeAddress">
                 Cheque Payee Address (if different from above): &nbsp;
-                <Text field="cheque-payee-address" id="cheque-payee-address" className="App-form-input" />
+                <Text field="chequePayeeAddress" id="chequePayeeAddress" className="App-form-input" />
               </label>
             </p>
 
@@ -274,7 +276,7 @@ class FundingApplication extends React.Component {
               <button
                 type="submit"
               >
-                Submit Form
+                Create PDF File
               </button>
             </p>
 

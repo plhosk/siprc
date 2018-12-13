@@ -17,8 +17,8 @@ const About = () => (
 
       <p>
         For funding requests, fill out our&nbsp;
-        {/* <Link to="/funding-application"> */}
-        <Link to="/about">
+        <Link to="/funding-application">
+          {/* <Link to="/about"> */}
           Online Application for Funding Form
         </Link>
         .
