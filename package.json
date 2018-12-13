@@ -3,11 +3,6 @@
   "version": "0.3.0",
   "private": true,
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
     "informed": "^1.10.12",
     "pdfmake": "^0.1.39",
     "prop-types": "^15.6.2",
@@ -19,6 +14,13 @@
     "react-scripts": "2.1.1",
     "react-scroll": "^1.7.10",
     "shortid": "^2.2.13"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1"
   },
   "scripts": {
     "start": "cross-env BROWSER=none react-scripts start",
