@@ -23,7 +23,7 @@ class FundingApplication extends React.Component {
   componentDidMount() {
     const { preventClose } = this.state
     this.setOnBeforeUnload(preventClose)
-    console.log(JSON.stringify(browser, null, 2))
+    // console.log(JSON.stringify(browser, null, 2))
   }
 
   componentDidUpdate() {
@@ -93,8 +93,8 @@ class FundingApplication extends React.Component {
 
         <section>
           {this.isOldBrowser() && (
-            <h1 style={{ color: 'green' }}>
-              This feature requires Chrome, Firefox, Edge, or Internet Explorer version 10 and higher.
+            <h1 style={{ color: 'green', margin: '1em' }}>
+              Notice: This feature requires Chrome, Firefox, Edge, or Internet Explorer version 10 and higher.
               Please switch to a newer web browser, or download the&nbsp;
               <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
                 blank form in PDF format
