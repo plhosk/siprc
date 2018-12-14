@@ -35,6 +35,20 @@ class FundingApplication extends React.Component {
     this.setOnBeforeUnload(false)
   }
 
+  isOldBrowser = () => {
+    if (browser && browser.name === 'ie' && browser.version) {
+      try {
+        const verNum = parseInt(browser.version.split('.')[0], 10)
+        if (verNum < 10) {
+          return true
+        }
+      } catch {
+        return false
+      }
+    }
+    return false
+  }
+
   setOnBeforeUnload = (preventClose) => {
     if (preventClose) {
       window.onbeforeunload = () => true
@@ -78,7 +92,7 @@ class FundingApplication extends React.Component {
         />
 
         <section>
-          {browser && browser.name === 'ie' && browser.version < 10 && (
+          {this.isOldBrowser() && (
             <h1 style={{ color: 'green' }}>
               This feature requires Chrome, Firefox, Edge, or Internet Explorer version 10 and higher.
               Please switch to a newer web browser, or download the&nbsp;
