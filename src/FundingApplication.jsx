@@ -23,6 +23,7 @@ class FundingApplication extends React.Component {
   componentDidMount() {
     const { preventClose } = this.state
     this.setOnBeforeUnload(preventClose)
+    console.log(browser)
   }
 
   componentDidUpdate() {
