@@ -3,6 +3,8 @@
   "version": "0.3.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "detect-browser": "^3.0.1",
     "informed": "^1.10.12",
     "pdfmake": "^0.1.39",
     "prop-types": "^15.6.2",
@@ -30,9 +32,8 @@
     "eject": "react-scripts eject"
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
+    ">0.02%",
+    "not ie <= 8",
     "not op_mini all"
   ]
 }

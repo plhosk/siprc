@@ -6,6 +6,9 @@ import {
 } from 'informed'
 import Modal from 'react-responsive-modal'
 import Loader from 'react-loader-spinner'
+import { detect } from 'detect-browser'
+
+const browser = detect()
 
 // import generatePdf from './fundingApplicationPdf'
 
@@ -74,6 +77,17 @@ class FundingApplication extends React.Component {
         />
 
         <section>
+          {browser && browser.name === 'ie' && browser.version < 10 && (
+            <h1 style={{ color: 'green' }}>
+              This feature requires Chrome, Firefox, Edge, or Internet Explorer version 10 and higher.
+              Please switch to a newer web browser, or download the&nbsp;
+              <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
+                blank form in PDF format
+              </a>
+              &nbsp;and fill it out by hand.
+            </h1>
+          )}
+
           <h1 className="App-form-header">
             Saturna Island Parks & Recreation Commission
             <br />
@@ -288,16 +302,14 @@ class FundingApplication extends React.Component {
 
             <br />
             <div className="App-form-buttons">
-              {loading
-                && (
-                  <Loader
-                    type="Audio"
-                    color="#6EA86A"
-                    height="50"
-                    width="50"
-                  />
-                )
-              }
+              {loading && (
+                <Loader
+                  type="Audio"
+                  color="#6EA86A"
+                  height="50"
+                  width="50"
+                />
+              )}
               <button
                 type="submit"
               >
