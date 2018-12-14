@@ -94,8 +94,12 @@ class FundingApplication extends React.Component {
         <section>
           {this.isOldBrowser() && (
             <h1 style={{ color: 'green', margin: '1em' }}>
-              Notice: This feature requires Chrome, Firefox, Edge, or Internet Explorer version 10 and higher.
-              Please switch to a newer web browser, or download the&nbsp;
+              Notice: This feature requires Firefox, Chrome, Edge, or Internet Explorer version 10 and higher.
+              Please switch to a newer web browser such as&nbsp;
+              <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer">
+                Firefox
+              </a>
+              , or download the&nbsp;
               <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
                 blank form in PDF format
               </a>
