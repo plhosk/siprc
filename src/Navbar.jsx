@@ -146,7 +146,9 @@ const Navbar = ({ location }) => {
 }
 
 Navbar.propTypes = {
-  location: PropTypes.shape({}).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
 }
 
 export default Navbar

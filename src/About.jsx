@@ -31,8 +31,8 @@ const About = () => (
           <li>You&apos;ll be prompted to save the PDF file to your device</li>
           <li>
             To complete your application, send the file, along with any supporting documents, by email to&nbsp;
-            <a href="mailto:parksrec@saturnanet.net" target="_blank" rel="noopener noreferrer">
-          parksrec@saturnanet.net
+            <a href="mailto:SaturnaParksandRec@gmail.com" target="_blank" rel="noopener noreferrer">
+              SaturnaParksandRec@gmail.com
             </a>
           </li>
         </ol>
