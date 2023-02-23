@@ -10,7 +10,7 @@ import Maps from './Maps'
 import Trails from './Trails'
 import Contact from './Contact'
 import About from './About'
-import FundingApplication from './FundingApplication'
+// import FundingApplication from './FundingApplication'
 
 const App = () => (
   <Router>
@@ -31,6 +31,17 @@ const App = () => (
           <BirdRock />
           <Route component={Navbar} />
           <div className="App-header-horizontal-bar-bottom" />
+          <div
+            style={{
+              backgroundColor: '#FFC600',
+              color: 'black',
+              fontSize: '1.5em',
+              padding: 50,
+            }}
+          >
+            This website is undergoing review and revision. Check back soon for updates.
+          </div>
+          <div style={{ height: 1, backgroundColor: '#bbb', border: 'none' }} />
         </header>
 
         <Route path="/" exact component={Home} />
@@ -39,7 +50,7 @@ const App = () => (
         <Route path="/trails" component={Trails} />
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
-        <Route path="/funding-application" component={FundingApplication} />
+        {/* <Route path="/funding-application" component={FundingApplication} /> */}
 
       </div>
       <div className="App-footer">

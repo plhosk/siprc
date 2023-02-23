@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const About = () => (
   <section>
@@ -11,21 +11,23 @@ const About = () => (
         </div>
         <img className="App-section-header-img" height="61" src="saturna-blue-right.png" alt="saturna right half" />
       </div>
-      <h3>
-        Funding Requests
-      </h3>
 
-      <p>
+      <p>This section is under construction. Check back soon</p>
+
+      {/* <h3>
+        Funding Requests
+      </h3> */}
+
+      {/* <p>
         For funding requests, fill out our&nbsp;
         <Link to="/funding-application">
-          {/* <Link to="/about"> */}
           Online Application for Funding Form
         </Link>
         .
         <br />
-      </p>
+      </p> */}
 
-      <div className="App-ordered-list">
+      {/* <div className="App-ordered-list">
         <ol>
           <li>A PDF file containing your responses will be created when you submit the form</li>
           <li>You&apos;ll be prompted to save the PDF file to your device</li>
@@ -36,15 +38,16 @@ const About = () => (
             </a>
           </li>
         </ol>
-      </div>
+      </div> */}
 
-      <p>
+      {/* <p>
         Alternatively, you may download a&nbsp;
         <a href="docs/SIPRC_Application_for_Funding.pdf" target="_blank">
           blank form in PDF format
         </a>
         &nbsp;and fill it out by hand.
-      </p>
+      </p> */}
+
     </div>
   </section>
 )
